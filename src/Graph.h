@@ -6,11 +6,11 @@ namespace Tp1
 	public class Graph
 	{
 		private:
-			Node[] nodes;
-			int sourceNodeId;
-			int destinationNodeId;
+			Node[] nodes = [];
+			int sourceNodeId = 0;
+			int destinationNodeId = 0;
 
-			Graph(Node[] nodes, int source, int dest)
+			Graph(const Node[] &nodes, const int source, const int dest)
 			{
 				this->nodes = nodes;
 				this->sourceNodeId = source;
@@ -18,27 +18,27 @@ namespace Tp1
 			}
 
 		public:
-			int nodeCount()
+			int nodeCount() const
 			{
 				//TODO Nathalie!
 			}
 
-			Vertex[] findPath(int node1, int node2)
+			Vertex[] &findPath(int node1, int node2) const
 			{
 				//TODO Reda!
 			}
 
-			int findMaxFlow()
+			int findMaxFlow() const
 			{
 				//TODO Reda!
 			}
 
-			void displayInConsole()
+			void displayInConsole() const
 			{
 				//TODO Arthur!
 			}
 
-			Node getNodeById(int id)
+			Node &getNodeById(int id) const
 			{
 				//TODO Nathalie!
 			}
@@ -48,7 +48,7 @@ namespace Tp1
 				//TODO
 			}
 
-			Graph computeResidualGraph()
+			Graph &computeResidualGraph()
 			{
 				//TODO
 			}
@@ -63,17 +63,17 @@ namespace Tp1
 				//TODO
 			}
 
-			Node[] getNodes()
+			Node[] &getNodes() const
 			{
 				//TODO Nathalie!
 			}
 
-			int getSourceNodeId()
+			int getSourceNodeId() const
 			{
 				//TODO Nathalie!
 			}
 
-			int getDestinationNodeId()
+			int getDestinationNodeId() const
 			{
 				//TODO Nathalie!
 			}
