@@ -7,11 +7,20 @@ namespace Tp1
 			Node[] nodes;
 			int sourceNodeId;
 			int destinationNodeId;
+			int numberOfNodes;
 
 		public:
 			Builder(int numberOfNodes)
 			{
-				this->nodes = new Node[numberOfNodes];
+				this->numberOfNodes = numberOfNodes;
+				this->nodes = new Node[this->numberOfNodes];
+
+				int i;
+
+				for (i = 0; i < this->numberOfNodes; i++)
+				{
+					this->nodes[i] = new Node();
+				}
 			}
 
 			Builder addVertex(
@@ -22,6 +31,21 @@ namespace Tp1
 				int flow
 			)
 			{
+				if (node1 < 0 || node1 > this->numberOfNodes)
+				{
+					//TODO Lancer exception.
+				}
+
+				if (minCapacity > maxCapacity)
+				{
+					//TODO Lancer exception.
+				}
+
+				if (flow < minCapacity || flow > maxCapacity)
+				{
+					//TODO Lancer exception.
+				}
+
 				//TODO Arthur!
 				return this;
 			}
@@ -44,5 +68,5 @@ namespace Tp1
 			{
 				//TODO Arthur! (don't forget to handle exceptions)
 			}
-	}	
+	}
 }
